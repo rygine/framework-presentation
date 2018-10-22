@@ -1,429 +1,299 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Finding The Way Forward</title>
-		<meta name="description" content="Finding The Way Forward">
-		<meta name="author" content="Ry Racherbaumer">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
 
-				<section>
-					<h2 style="text-transform: uppercase">Finding The Way Forward</h2>
-					<h4>The Search for Powerful Libraries, Scalable Architecture, Smart Tooling and Optimized Workflows, Oh My!</h4>
-				</section>
+<head>
+  <meta charset="utf-8">
+  <title>Finding The Way Forward</title>
+  <meta name="description" content="Finding The Way Forward">
+  <meta name="author" content="Ry Racherbaumer">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
 
-        <section data-background="./images/ridiculous1.gif">
-        </section>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h2 style="text-transform: uppercase">Finding The Way Forward</h2>
+        <h4>The Search for Powerful Libraries, Scalable Architecture, Smart Tooling and Optimized Workflows, Oh My!</h4>
+      </section>
+
+      <section>
+        <h2>Seeking The Holy Grail</h2>
+        <p>
+          <img width="80%" src="images/holygrail1.gif">
+        </p>
+      </section>
+
+      <section>
 
         <section>
-          <h2>Finding Our Holy Grail</h2>
+          <h2>Where Do We Start?</h2>
           <p>
-            <img width="80%" src="images/holygrail1.gif">
+            <img width="80%" src="images/framework.jpg">
           </p>
         </section>
 
-				<section>
-
-					<section>
-						<h2>Where Do We Start?</h2>
-						<p>
-							<img width="80%" src="images/framework.jpg">
-						</p>
-					</section>
-
-					<section>
-						<h2>A Paradox of Choice</h2>
-						<p>
-							<img src="images/sohot.jpg">
-						</p>
-					</section>
-
-          <section>
-						<h2>What's Out There?</h2>
-						<ul>
-							<li class="fragment">Angular</li>
-							<li class="fragment">Ember</li>
-							<li class="fragment">Backbone + Marionette</li>
-							<li class="fragment">Meteor</li>
-							<li class="fragment">ExtJS</li>
-							<li class="fragment">React + Flux</li>
-							<li class="fragment">+ <span id="libcounter">127</span> more...</li>
-						</ul>
-          </section>
-
-				</section>
-
         <section>
-
-          <section class="whyreact">
-            <h2>Why React + <span class="nope">Flux</span> Redux?</h2>
-            <p class="fragment">
-              <img width="60%" src="images/statemanagement.jpg">
-            </p>
-          </section>
-
-          <section class="quote">
-            <div>
-              <blockquote cite="http://rackt.github.io/redux/docs/introduction/Motivation.html">
-                <span style="color: #42affa;">Managing ever-changing state is hard.</span> If a model can update another model, then a view can update a model that updates another model, and this, in turn, might cause another view to update. At some point you no longer know what happens in your app. You no longer control when, why, and how the state is updated. When the system is opaque and non-deterministic, it’s hard to reproduce bugs or add new features.
-              </blockquote>
-              <p class="align-right">
-                Dan Abramov<br>
-                <i>Author, Redux</i>
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Why Not a Framework?</h2>
-            <p style="text-align: left"><b>Frameworks</b> like Angular, Ember, Meteor and <span class="nope">ExtJS</span> are good choices.</p>
-            <ul>
-              <li class="fragment">All-in-one solution</li>
-              <li class="fragment">Out of the box readiness</li>
-              <li class="fragment">Documentation?</li>
-              <li class="fragment bad">Opinionated</li>
-              <li class="fragment bad">Lock-in</li>
-              <li class="fragment bad">Upgrades and migrations</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Why Not Another Library?</h2>
-            <p style="text-align: left">Backbone + Marionette and many other combinations are also good choices.</p>
-            <ul>
-              <li class="fragment">Mature</li>
-              <li class="fragment">Proven</li>
-              <li class="fragment">Documentation</li>
-              <li class="fragment bad">Complexity</li>
-              <li class="fragment bad">Maintainability</li>
-            </ul>
-          </section>
-
-          <section class="relic">
-            <h2>A Relic of the Past</h2>
-            <p>
-              <img src="images/mvc-diagram.svg">
-            </p>
-            <div class="fragment">
-              <blockquote>
-                I love debugging this shit!
-              </blockquote>
-              <p class="align-right">
-                said no one... <u>ever</u>
-              </p>
-            </div>
-          </section>
-
+          <h2>A Paradox of Choice</h2>
+          <p>
+            <img src="images/sohot.jpg">
+          </p>
         </section>
 
         <section>
-
-          <section>
-            <h2>Introducing React + Flux<br><small>Unidirectional Data Flow for the Masses</small></h2>
-            <p>
-              <img src="images/flux-diagram.svg">
-            </p>
-          </section>
-
-          <section>
-            <h2>Enhanced with Redux</h2>
-            <p>
-              <img src="images/redux-diagram.svg">
-            </p>
-            <p><span class="fragment">No state mutations!</span> <span class="fragment">Functions are first-class citizens.</span></p>
-          </section>
-
-          <section data-background="./images/whoa4.gif">
-          </section>
-
-          <section>
-            <h2>But what does it all mean?</h2>
-            <ul>
-              <li class="fragment">Focus on data (state)</li>
-              <li class="fragment determine">
-                Deterministic
-                <div class="pure">
-                  <img src="images/functions.jpg">
-                </div>
-              </li>
-              <li class="fragment timetravel">
-                Time travel
-                <div class="bttf">
-                  <img src="images/bttf1.jpg">
-                </div>
-              </li>
-              <li class="fragment">Fast iteration</li>
-              <li class="fragment debug">
-                Easy debugging
-                <div class="works">
-                  <img src="images/bugs3.jpg">
-                </div>
-              </li>
-              <li class="fragment">Simple testing</li>
-              <li class="fragment">Awesome workflow</li>
-            </ul>
-          </section>
-
-          <section data-background="./images/whoa2.gif">
-          </section>
-
+          <h2>What's Out There?</h2>
+          <ul>
+            <li class="fragment">Angular</li>
+            <li class="fragment">Ember</li>
+            <li class="fragment">React + State Management</li>
+            <li class="fragment">Vue + State Management</li>
+            <li class="fragment">+ <span id="libcounter">1</span> more...</li>
+          </ul>
         </section>
 
+      </section>
+
+      <section>
+
         <section>
-          <h2>Other Considerations</h2>
-          <div style="display: flex">
-            <ul style="width:50%;">
-              <li class="fragment">Folder structure</li>
-              <li class="fragment">
-                Coding style
-                <ul>
-                  <li>Javascript &ndash; ESLint/JSCS</li>
-                  <li>CSS &ndash; BEM/SUITCSS</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                Tooling
-                <ul>
-                  <li>Bash/Node via NPM</li>
-                  <li>Webpack</li>
-                </ul>
-              </li>
-              <li class="fragment">Relay/Falcor</li>
-              <li class="fragment">
-                CSS
-                <ul>
-                  <li>LESS</li>
-                  <li>SASS</li>
-                  <li>PostCSS</li>
-                </ul>
-              </li>
-            </ul>
-            <ul style="width:50%;">
-              <li class="fragment">
-                Unit Testing
-                <ul>
-                  <li>Jasmine</li>
-                  <li>Mocha</li>
-                  <li>Tape</li>
-                  <li>Expect</li>
-                  <li>Jest</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                Integration Testing
-                <ul>
-                  <li>Nightwatch</li>
-                </ul>
-              </li>
-              <li class="fragment">
-                Workflow
-                <ul>
-                  <li>Webpack Hot Middleware</li>
-                  <li>React Hot Reloading</li>
-                </ul>
-              </li>
-            </ul>
+          <h2>Why Not a Framework?</h2>
+          <p style="text-align: left"><b>Frameworks</b> like Angular and Ember can be good choices.</p>
+          <ul>
+            <li class="fragment">All-in-one solution</li>
+            <li class="fragment">Out of the box readiness</li>
+            <li class="fragment">Documentation</li>
+            <li class="fragment bad">Opinionated</li>
+            <li class="fragment bad">Lock-in</li>
+            <li class="fragment bad">Upgrades and migrations</li>
+          </ul>
+        </section>
+
+        <section class="whyreact">
+          <h2>Why React</h2>
+          <ul>
+            <li class="fragment">Simplicity</li>
+            <li class="fragment">Mature</li>
+            <li class="fragment">Scalable</li>
+            <li class="fragment">Documentation</li>
+            <li class="fragment">Community</li>
+            <li class="fragment">Well maintained</li>
+          </ul>
+        </section>
+
+        <section class="whyredux">
+          <h2>Why Redux?</h2>
+          <p class="fragment">
+            <img width="60%" src="images/statemanagement.jpg">
+          </p>
+        </section>
+
+        <section class="quote">
+          <div>
+            <blockquote cite="http://rackt.github.io/redux/docs/introduction/Motivation.html">
+              <span style="color: #42affa;">Managing ever-changing state is hard.</span> If a model can update another
+              model, then a view can update a model that updates another model, and this, in turn, might cause another
+              view to update. At some point you no longer know what happens in your app. You no longer control when,
+              why, and how the state is updated. When the system is opaque and non-deterministic, it’s hard to
+              reproduce bugs or add new features.
+            </blockquote>
+            <p class="align-right">
+              Dan Abramov<br>
+              <i>Author, Redux</i>
+            </p>
           </div>
         </section>
 
-        <section data-background="./images/nosense.gif">
+        <section class="relic">
+          <h2>A Relic of the Past</h2>
+          <p>
+            <img src="images/mvc-diagram.svg">
+          </p>
+          <div class="fragment">
+            <blockquote>
+              I love debugging this!
+            </blockquote>
+            <p class="align-right">
+              - No one
+            </p>
+          </div>
+        </section>
+
+      </section>
+
+      <section>
+
+        <section>
+          <h2>Introducing React + Flux<br><small>Unidirectional Data Flow for the Masses</small></h2>
+          <p>
+            <img src="images/flux-diagram.svg">
+          </p>
         </section>
 
         <section>
-          <h2>Next Steps</h2>
-          <ol>
-            <li class="fragment">Create initial framework</li>
-            <li class="fragment">Feedback</li>
-            <li class="fragment">Develop a generator</li>
-            <li class="fragment">Refine</li>
-            <li class="fragment">Rinse. Repeat.</li>
-            <li class="fragment">In-depth technical presentations/discussions</li>
-          </ol>
+          <h2>Enhanced with Redux</h2>
+          <p>
+            <img src="images/redux-diagram.svg">
+          </p>
+          <p class="fragment">No state mutations.</p>
+          <p class="fragment">Functions are first-class citizens.</p>
         </section>
 
-				<section class="references">
-					<h2>References</h2>
-					<ol>
-            <li>
-              Thinking in React<br>
-              <a href="https://facebook.github.io/react/docs/thinking-in-react.html">https://facebook.github.io/react/docs/thinking-in-react.html</a>
+        <section>
+          <h2>But what does it all mean?</h2>
+          <ul>
+            <li class="fragment">Focus on data (state)</li>
+            <li class="fragment determine">
+              Deterministic
+              <div class="pure">
+                <img src="images/functions.jpg">
+              </div>
             </li>
-            <li>
-              Redux Documentation<br>
-              <a href="http://rackt.github.io/redux/index.html">http://rackt.github.io/redux/index.html</a>
+            <li class="fragment timetravel">
+              Time travel
             </li>
-            <li>
-              ESLint<br>
-              <a href="http://eslint.org/">http://eslint.org/</a>
+            <li class="fragment">Fast iteration</li>
+            <li class="fragment debug">
+              Easy debugging
+              <div class="works">
+                <img src="images/bugs3.jpg">
+              </div>
             </li>
-            <li>
-              JSCS<br>
-              <a href="http://jscs.info/">http://jscs.info/</a>
-            </li>
-            <li>
-              Webpack<br>
-              <a href="https://webpack.github.io/">https://webpack.github.io/</a>
-            </li>
-            <li>
-              PostCSS<br>
-              <a href="https://github.com/postcss/postcss">https://github.com/postcss/postcss</a>
-            </li>
-            <li>
-              BEM<br>
-              <a href="https://en.bem.info/">https://en.bem.info/</a>
-            </li>
-            <li>
-              SUITCSS<br>
-              <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md</a>
-            </li>
-            <li>
-              React Hot Loader<br>
-              <a href="http://gaearon.github.io/react-hot-loader/">http://gaearon.github.io/react-hot-loader/</a>
-            </li>
-            <li>
-              Jasmine<br>
-              <a href="http://jasmine.github.io/">http://jasmine.github.io/</a>
-            </li>
-            <li>
-              Tape<br>
-              <a href="https://github.com/substack/tape">https://github.com/substack/tape</a>
-            </li>
-            <li>
-              Mocha<br>
-              <a href="https://mochajs.org/">https://mochajs.org/</a>
-            </li>
-            <li>
-              Expect<br>
-              <a href="https://github.com/mjackson/expect">https://github.com/mjackson/expect</a>
-            </li>
-            <li>
-              Jest<br>
-              <a href="https://facebook.github.io/jest/">https://facebook.github.io/jest/</a>
-            </li>
-            <li>
-              Nightwatch<br>
-              <a href="http://nightwatchjs.org/">http://nightwatchjs.org/</a>
-            </li>
-            <li>
-              AirBnb Style Guide<br>
-              <a href="https://github.com/airbnb/javascript">https://github.com/airbnb/javascript</a>
-            </li>
-            <li>
-              Relay<br>
-              <a href="https://facebook.github.io/relay/">https://facebook.github.io/relay/</a>
-            </li>
-            <li>
-              Falcor<br>
-              <a href="https://github.com/Netflix/falcor">https://github.com/Netflix/falcor</a>
-            </li>
-					</ol>
-				</section>
-
-        <section data-background="./images/clapping.gif">
+            <li class="fragment">Simple testing</li>
+            <li class="fragment">Awesome workflow</li>
+          </ul>
         </section>
 
-			</div>
-		</div>
-		<script src="lib/js/head.min.js"></script>
-		<script src="lib/js/numeral.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script>
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-				]
-			});
-			var countTimeout;
-			var intervalReact;
-			var intervalReactColor;
-			var libCounter = document.getElementById('libcounter');
-			var startExtJs = false;
-			var startReact = false;
-			var startReactColor = false;
-      Reveal.addEventListener('slidechanged', function(event) {
-        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-        console.log(event.indexh);
-        console.log(event.indexv);
-				if (event.indexh === 3 && event.indexv === 2) {
-					function addToCount(delay) {
-						var count = numeral().unformat(libCounter.textContent);
-						count++;
-						countTimeout = setTimeout(function() {
-							libCounter.textContent = numeral(count).format('0,0');
-							addToCount(Math.floor(Math.random() * 1500) + 100);
-						}, delay);
-					}
-					addToCount(0);
-				} else {
-					clearTimeout(countTimeout);
-					clearInterval(intervalReact);
-					clearInterval(intervalReactColor);
-				}
-      });
-			Reveal.addEventListener('fragmentshown', function(event) {
-				var fragment = event.fragment;
-				if (fragment.textContent === 'ExtJS') {
-					if (!startExtJs) {
-						startExtJs = true;
-						setTimeout(function() {
-							fragment.classList.add('delayed');
-							setTimeout(function() {
-								fragment.style.color = '#666';
-								setTimeout(function() {
-									fragment.classList.add('nope');
-								}, 3000);
-							}, 0);
-						}, 250);
-					}
-				} else if (fragment.textContent === 'React + Flux') {
-					if (!startReact) {
-						startReact = true;
-						setTimeout(function() {
-							var size = 100;
-							intervalReact = setInterval(function() {
-								size++;
-								fragment.style.fontSize = numeral(size / 100).format('0%');
-								if (size > 200) {
-									if (!startReactColor) {
-										startReactColor = true;
-										fragment.style['transition-duration'] = '0s';
-										intervalReactColor = setInterval(function() {
-											fragment.style.color = ['#fff', '#f00', '#0f0', '#00f'][Math.floor(Math.random() * 4)];
-										}, 10);
-									}
-								}
-							}, 150);
-						}, 10000);
-					}
-				}
-			});
-		</script>
-	</body>
+        <section data-background="./images/whoa2.gif">
+        </section>
+
+      </section>
+
+      <section>
+        <h2>Other Considerations</h2>
+        <div style="display: flex">
+          <ul style="width:50%;">
+            <li class="fragment">Folder structure</li>
+            <li class="fragment">
+              Coding style
+              <ul>
+                <li>Prettier</li>
+                <li>Javascript &ndash; ESLint</li>
+                <li>CSS &ndash; BEM, Stylelint</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Tooling
+              <ul>
+                <li>Node.js via Yarn</li>
+                <li>Webpack</li>
+              </ul>
+            </li>
+            <li class="fragment">GraphQL via Relay/Apollo</li>
+            <li class="fragment">
+              CSS
+              <ul>
+                <li>PostCSS</li>
+                <li>CSSNext</li>
+              </ul>
+            </li>
+          </ul>
+          <ul style="width:50%;">
+            <li class="fragment">
+              Unit Testing
+              <ul>
+                <li>Jest</li>
+                <li>Enzyme</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Integration Testing
+              <ul>
+                <li>Nightwatch</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Workflow
+              <ul>
+                <li>Webpack w/ Hot Reloading</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Documentation
+              <ul>
+                <li>Gitbook</li>
+                <li>Storybook</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section data-background="./images/clapping.gif">
+      </section>
+
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="lib/js/numeral.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+      ]
+    });
+    var countTimeout;
+    var intervalReact;
+    var intervalReactColor;
+    var libCounter = document.getElementById('libcounter');
+    var startExtJs = false;
+    var startReact = false;
+    var startReactColor = false;
+    Reveal.addEventListener('slidechanged', function (event) {
+      // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      console.log(event.indexh);
+      console.log(event.indexv);
+      if (event.indexh === 2 && event.indexv === 2) {
+        function addToCount(delay) {
+          var count = numeral().unformat(libCounter.textContent);
+          count++;
+          countTimeout = setTimeout(function () {
+            libCounter.textContent = numeral(count).format('0,0');
+            addToCount(Math.floor(Math.random() * 500) + 100);
+          }, delay);
+        }
+        addToCount(0);
+      } else {
+        clearTimeout(countTimeout);
+        clearInterval(intervalReact);
+        clearInterval(intervalReactColor);
+      }
+    });
+  </script>
+</body>
+
 </html>
